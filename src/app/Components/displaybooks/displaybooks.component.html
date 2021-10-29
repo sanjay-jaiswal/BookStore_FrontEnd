@@ -1,0 +1,16 @@
+<div style="display:flex; flex-direction: row;" fxLayout="row wrap" fxLayoutGap="60px">
+<mat-card class="card" *ngFor='let book of bookArray'>
+    <img src="./../../../assets/Image 11.png" >
+    
+<div>
+    {{book.bookName}}
+    by {{book.author}}
+    RS {{book.price}}
+
+</div>
+      
+</mat-card>
+</div>
+
+
+

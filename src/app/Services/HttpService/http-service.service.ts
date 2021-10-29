@@ -18,10 +18,15 @@ export class HttpServiceService {
     console.log(data);
     return this.http.put(url,data,isHeaderRequired && headers)
   }
-  get(url : string,data : any, isHeaderRequired:any = false, headers:any=null){
-    console.log(data);
-    console.log(headers);
-    return this.http.get(url,isHeaderRequired && headers);
+  // get(url : string,data : any, isHeaderRequired:any = false, headers:any=null){
+  //   console.log(data);
+  //   console.log(headers);
+  //   return this.http.get(url,isHeaderRequired && headers);
+  // }
+
+
+  GetService(url: string,isHeaderRequired: any = false, headers: any = null) {
+    return this.http.get(url,isHeaderRequired && headers)
   }
 
   delete(url : string,data : any, isHeaderRequired:any = false, headers:any=null){

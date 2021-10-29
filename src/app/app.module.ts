@@ -39,6 +39,9 @@ import { HomeComponent } from './Components/home/home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { OrderPlacedComponent } from './Components/order-placed/order-placed.component';
 import { BookDescriptionComponent } from './Components/book-description/book-description.component';
+import { DisplaybooksComponent } from './Components/displaybooks/displaybooks.component';
+
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -49,10 +52,11 @@ import { BookDescriptionComponent } from './Components/book-description/book-des
     ForgotpasswordComponent,
     HomeComponent,
     OrderPlacedComponent,
-    BookDescriptionComponent
+    BookDescriptionComponent,
+    DisplaybooksComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     MatTabsModule,
     BrowserAnimationsModule,
@@ -73,7 +77,8 @@ import { BookDescriptionComponent } from './Components/book-description/book-des
     MatDividerModule,
     MatSelectModule,
     MatTooltipModule,
-    FlexLayoutModule                
+    FlexLayoutModule,
+    MatGridListModule                
 
   ],
   providers: [],
