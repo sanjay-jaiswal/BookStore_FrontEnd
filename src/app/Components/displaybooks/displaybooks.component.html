@@ -55,16 +55,20 @@
                 
                 <img mat-card-image src="./../../../assets/Image 11@2x.png">
                 <mat-card-content>
-                    <p>
-                        {{book.bookName}}
-                        by {{book.author}}
-                        RS {{book.price}}
-                    </p>
+                    <div style="font-size: medium;">{{book.bookName}}</div>
+
+                    <div>by {{book.author}}</div>
+                    <div style="font-size: medium;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">RS {{book.price}}</div>
+                    
+                    <!-- <p> -->
+                        <!-- by {{book.author}}
+                        RS {{book.price}} -->
+                    <!-- </p> -->
                 </mat-card-content>
-                    <mat-card-actions>
+                    <!-- <mat-card-actions>
                         <button mat-button>Cart</button>
                         <button mat-button>Wishlist</button>
-                    </mat-card-actions>
+                    </mat-card-actions> -->
                 </mat-card>
     
             </div>
