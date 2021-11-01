@@ -1,16 +1,83 @@
-<div style="display:flex; flex-direction: row;" fxLayout="row wrap" fxLayoutGap="60px">
-<mat-card class="card" *ngFor='let book of bookArray'>
+<!-- <div style="display:flex; flex-direction: row;" fxLayout="row wrap" fxLayoutGap="60px">
+  <div class="totalBookCount">
+    <span style="font-size: 25px;">Books </span>
+    <span style="font-size: 12px; color: grey;">({{totalBooks}} items)</span>
+</div>
+    <mat-card class="card" *ngFor='let book of bookArray'>
+   
     <img src="./../../../assets/Image 11.png" >
     
+
 <div>
     {{book.bookName}}
     by {{book.author}}
-    RS {{book.price}}
+    RS {{book.price}} -->
 
-</div>
-      
-</mat-card>
-</div>
+<!-- </div> -->
+      <!-- <a class="btn" routerLink="/votes">Check votes</a> -->
+
+<!-- </mat-card>
+</div> -->
 
 
+
+
+
+<div class="container" [ngStyle.xs]="{'margin-left.px':0,'margin-right.px':0}">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" fxLayoutAlign.xs="start center">
+       <div class="book_num">
+          <span style="font-size: 25px;">Books </span>
+          <span style="font-size: 12px; color: grey;">({{totalBooks}} items)</span>
+       </div>
+       <div fxLayoutAlign="end" fxFlex>
+          <form class="filterform">
+             <mat-form-field appearance="outline">
+                <mat-select [(value)]="selectedValue">
+                   <mat-option *ngFor="let element of box" [value]="element.value">
+                      {{element.value}}
+                   </mat-option>
+                </mat-select>
+             </mat-form-field>
+          </form>
+       </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let book of bookArray">
+    
+                <mat-card class="mat-elevation-z4">
+                <!-- <mat-card-header>
+                    <mat-card-title>book store{{book}}</mat-card-title>
+                </mat-card-header> -->
+                
+                <img mat-card-image src="./../../../assets/Image 11.png">
+                <mat-card-content>
+                    <p>
+                        {{book.bookName}}
+                        by {{book.author}}
+                        RS {{book.price}}
+                    </p>
+                </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button>Cart</button>
+                        <button mat-button>Wishlist</button>
+                    </mat-card-actions>
+                </mat-card>
+    
+            </div>
+        </div>
+    </div>
+    
+    
+    
 

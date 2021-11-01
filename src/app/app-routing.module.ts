@@ -12,13 +12,15 @@ const routes: Routes = [
   {path : 'forgot',component:ForgotpasswordComponent},
   {path : 'home',component: HomeComponent,
 children:[
-{path :'displaybooks',component : DisplaybooksComponent}
+{path :'displaybooks',component : DisplaybooksComponent},
+{path : 'description',component: BookDescriptionComponent},
+
 ]
 },
   
 
   {path : 'orderplaced',component: OrderPlacedComponent},
-  {path : 'description',component: BookDescriptionComponent},
+  // {path : 'description',component: BookDescriptionComponent},
 
   
 ];

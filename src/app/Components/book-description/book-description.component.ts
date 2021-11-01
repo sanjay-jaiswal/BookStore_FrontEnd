@@ -33,6 +33,13 @@ export class BookDescriptionComponent implements OnInit {
     textArea.style.height = 'auto';
     textArea.style.height = Math.min(500, textArea.scrollHeight) + 'px';
   }
+
+
+  AddToCart() {
+    
+  }
+
+
   AddtoWishList() {}
 
   GetCart() {}
