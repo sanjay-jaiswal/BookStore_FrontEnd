@@ -42,6 +42,7 @@ import { BookDescriptionComponent } from './Components/book-description/book-des
 import { DisplaybooksComponent } from './Components/displaybooks/displaybooks.component';
 
 import {MatGridListModule} from '@angular/material/grid-list';
+import { FooterComponent } from './Components/footer/footer.component';
 
 
 
@@ -53,7 +54,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     HomeComponent,
     OrderPlacedComponent,
     BookDescriptionComponent,
-    DisplaybooksComponent
+    DisplaybooksComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

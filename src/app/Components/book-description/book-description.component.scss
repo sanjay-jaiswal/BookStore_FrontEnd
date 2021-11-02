@@ -192,6 +192,26 @@
             margin-right: 15px;
         }
     }
+
+    .fav-icon-bag {
+        text-align: center;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 170px;
+        height: 40px;
+        border-radius: 2px;
+        background-color: #333333;
+        color: white;
+        font-size: 15px;
+        font-family: "Roboto", sans-serif;
+        line-height: 18px;
+        .material-icons {
+            margin-right: 15px;
+        }
+    }
+
 }
 .customer-rating {
     display: flex;

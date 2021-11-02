@@ -5,10 +5,19 @@
             <div class="stock" *ngIf='bookdetails["bookQuantity"]==0'>
                 <div>Out of stock</div>
             </div>
-            <img src="{{bookdetails['bigImage']}}" alt="" width="282px" height="364px">
+            <img src="{{bookdetails['Image 23@2x']}}" alt="" width="282px" height="364px">
         </div>
         <div class="book-function">
-            <button style ="cursor: pointer;" class="add-to-bag" (click)="AddBooktoCart();">{{bookdetails['bookQuantity'] == 0 ? 'NOTIFY ME':added?'ADD ONE MORE':'ADD TO BAG'}}</button>
+            <!-- <button style ="cursor: pointer;" class="add-to-bag" (click)="AddBooktoCart();">
+                {{bookdetails['bookQuantity'] == 0 ? 'NOTIFY ME':added?'ADD ONE MORE':'ADD TO BAG'}}
+                
+            </button> -->
+
+            <button class="fav-icon-bag" style ="cursor: pointer; background-color: rgb(165, 60, 60);" >
+                <i class="material-icons"></i>
+                <span>ADD TO BAG</span>
+            </button>
+
             <button class="fav-icon" style ="cursor: pointer;" (click)="AddtoWishList()">
                 <i class="material-icons">favorite_border</i>
                 <span>WISHLIST</span>
