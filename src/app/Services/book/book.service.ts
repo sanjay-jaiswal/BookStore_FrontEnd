@@ -10,6 +10,7 @@ export class BookService {
 
 
   baseURL = environment.baseUrl
+  GetToken:any;
 
   constructor(private http: HttpServiceService) { }
 
@@ -21,5 +22,16 @@ export class BookService {
     }
     return this.http.GetService(this.baseURL + '/bookstore_user/get/book', false, headers);  }
 
+
+
+    AddBookToWishList(productID: any) {
+      let headers = {
+        headers: new HttpHeaders({
+          'content-Type': 'application/json',
+          'x-access-token': this.GetToken
+        })
+      }
+      return this.http.post(this.baseURL + "/bookstore_user/add_wish_list/" + productID, null, true, headers);
+    }
 
 }

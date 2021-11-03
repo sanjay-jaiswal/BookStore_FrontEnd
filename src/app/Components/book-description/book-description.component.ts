@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { BookService } from 'src/app/Services/book/book.service';
 
 @Component({
   selector: 'app-book-description',
@@ -17,7 +18,10 @@ export class BookDescriptionComponent implements OnInit {
   added = false;
   total = 0;
   cartDetail: any = [];
-  constructor( private snackBar: MatSnackBar) { }
+  BookId:any;
+  storeData:any;
+
+  constructor( private snackBar: MatSnackBar, private bookService:BookService) { }
 
   ngOnInit(): void {
 
@@ -35,12 +39,35 @@ export class BookDescriptionComponent implements OnInit {
   }
 
 
-  AddToCart() {
-    
+
+
+  DisplayBookDetails() {
+    this.bookService.FetchAllBooksData().subscribe((res: any) => {
+      res.result.forEach((resData: any) => {
+        if (resData._id == this.BookId) {
+          this.storeData = resData;
+        }
+      });
+
+      console.log(this.storeData);
+    })
   }
 
+ AddToWishList() {
+    this.bookService.AddBookToWishList(this.storeData._id).subscribe(
+      (response: any) => {
+        console.log(response);
+        this.snackBar.open(response.message, "close", {
+          duration: 1800,
+        })
+      },
+    )
+  }
+  
 
-  AddtoWishList() {}
+  AddToCart() { }
+
+  // AddtoWishList() {}
 
   GetCart() {}
 
