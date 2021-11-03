@@ -85,7 +85,7 @@
 
 
     <div class="container" [ngStyle.xs]="{'margin-left.px':0,'margin-right.px':0}">
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" fxLayoutAlign.xs="start center">
+        <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="start center" fxLayoutAlign.xs="start center">
            <div class="bookQuantity">
               <span style="font-size: 25px;">Books </span>
               <span style="font-size: 12px; color: grey;">({{totalBooks}} items)</span>
@@ -102,7 +102,9 @@
               </form>
            </div>
         </div>
-        <div class="body">
+
+        
+        <div class="body" fxLayoutGap="16px grid">
            <mat-card class="content" *ngFor='let book of bookArray' matTooltip="See Description" matTooltipClass="tooltip"
               (click)="DisplayBookDetails(book)">
      
@@ -127,7 +129,7 @@
                        </div>
                     </div>
                     <div style="font: normal normal normal 10px/13px Roboto; color: #878787;">
-                       (20)
+                       (25)
                     </div>
                  </div>
      
