@@ -43,6 +43,7 @@ import { DisplaybooksComponent } from './Components/displaybooks/displaybooks.co
 
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FooterComponent } from './Components/footer/footer.component';
+import { CartComponent } from './Components/cart/cart.component';
 
 
 
@@ -55,7 +56,8 @@ import { FooterComponent } from './Components/footer/footer.component';
     OrderPlacedComponent,
     BookDescriptionComponent,
     DisplaybooksComponent,
-    FooterComponent
+    FooterComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
